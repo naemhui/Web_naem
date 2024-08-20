@@ -9,8 +9,10 @@
     .card {
       width: 80%;
       border: 1px solid black;
-      /* 1 */
-      /* 2 */
+      /* 1.  */
+      display: flex;
+      /* 2. 반응형 레이아웃 */
+      flex-wrap: wrap;
     }
 
     img {
@@ -18,13 +20,17 @@
     }
 
     .thumbnail {
-      /* 3 */
-      /* 4 */
+      /* 3. 이미지가 너무 꽉 차있음 근데 이거 설정하면 여백이 생겨버림 */
+      flex-basis: 700px;
+      /* 4. 여백 생기면 여백 나눠줘버려 */
+      flex-grow: 1;
     }
 
     .content {
-      /* 3 */
-      /* 4 */
+      /* 3. 위 grow와 함께 설정: 기준점을 지나면 이미지도 다시 채워짐 */
+      flex-basis: 350px;
+      /* 4. 글자 여백도 설정 */
+      flex-grow: 1;
     }
   </style>
 </head>
